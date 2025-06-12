@@ -1,0 +1,52 @@
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Crypto Rock, Paper, Scissors&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id="game-container"&gt;
+        &lt;h1&gt;Verifiable Rock, Paper, Scissors&lt;/h1&gt;
+
+        &lt;div class="player-section" id="playerA-commit-section"&gt;
+            &lt;h2&gt;Player A: Make Your Move&lt;/h2&gt;
+            &lt;p&gt;(Look away, Player B!)&lt;/p&gt;
+            &lt;div class="choices"&gt;
+                &lt;button class="choice-btn" data-move="rock"&gt;✊ Rock&lt;/button&gt;
+                &lt;button class="choice-btn" data-move="paper"&gt;🖐️ Paper&lt;/button&gt;
+                &lt;button class="choice-btn" data-move="scissors"&gt;✌️ Scissors&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;button id="commitA-btn"&gt;Lock In &amp; Generate Commitment&lt;/button&gt;
+            &lt;div class="output" id="outputA"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="player-section" id="playerB-commit-section" style="display:none;"&gt;
+            &lt;h2&gt;Player B: Make Your Move&lt;/h2&gt;
+            &lt;p&gt;(Look away, Player A!)&lt;/p&gt;
+            &lt;div class="choices"&gt;
+                &lt;button class="choice-btn" data-move="rock"&gt;✊ Rock&lt;/button&gt;
+                &lt;button class="choice-btn" data-move="paper"&gt;🖐️ Paper&lt;/button&gt;
+                &lt;button class="choice-btn" data-move="scissors"&gt;✌️ Scissors&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;button id="commitB-btn"&gt;Lock In &amp; Generate Commitment&lt;/button&gt;
+            &lt;div class="output" id="outputB"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="player-section" id="reveal-section" style="display:none;"&gt;
+            &lt;h2&gt;Reveal Phase&lt;/h2&gt;
+            &lt;p&gt;Both players have committed. Now, reveal your choices to verify the winner.&lt;/p&gt;
+            &lt;button id="reveal-btn"&gt;Reveal and Verify Winner&lt;/button&gt;
+        &lt;/div&gt;
+
+        &lt;div id="results-section" style="display:none;"&gt;
+            &lt;h2&gt;--- Results ---&lt;/h2&gt;
+            &lt;pre id="verification-log"&gt;&lt;/pre&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;script src="script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
